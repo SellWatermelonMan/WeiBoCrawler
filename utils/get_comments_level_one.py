@@ -158,12 +158,3 @@ def get_all_level_one(uid, mid, cookie, max_times=15):
 
     except Exception as e:
         raise ValueError("解析页面失败，请检查你的cookie是否正确！")
-
-
-if __name__ == "__main__":
-    # 这里的uid，mid是主体内容的uid和mid
-    uid = "1006550592"
-    mid = "5046560175424086"
-    cookie = "SINAGLOBAL=8518412904158.368.1713933172488; SUB=_2A25La68FDeRhGeFJ4lIT9CzNyj6IHXVoCK7NrDV8PUNbmtANLXetkW9NfsmQ4Qz8zDr0mXZfri_ta_ZUdx1oaRtm; ALF=02_1721199701; _s_tentry=www.weibo.com; Apache=2102778680934.707.1718678424260; XSRF-TOKEN=PRz0XbyfMJG4mq7eMDRnCAPT; ULV=1718678424414:3:2:2:2102778680934.707.1718678424260:1718607749265; WBPSESS=2bPq4LTfaY-EnTnt8h5hWX9KGoz50scMNqd4lpDCT8IiCLnpv2C9Z_Kk8JVbYkIyBQ0eFNYccRFpnV_A6ntYbzFhGRa6K_Y0y_9c3zhS6S73tx-mc1RjJ-zr1RH9K8LXJeEA0KnwBx7zuzsiTaBcug=="
-    data = get_all_level_one(uid, mid, cookie)
-    data.to_csv("demo_comments.csv", encoding="utf_8_sig")

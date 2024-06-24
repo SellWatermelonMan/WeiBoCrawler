@@ -2,7 +2,7 @@
 
 import requests
 from urllib import parse
-from parse_html import get_dataframe_from_html_text
+from utils.parse_html import get_dataframe_from_html_text
 import logging
 from rich.progress import track
 import pandas as pd
@@ -111,11 +111,3 @@ def get_all_main_body(q, kind, cookie, timescope=None):
     except Exception as e:
         logging.warning("解析页面失败，请检查你的cookie是否正确！")
         raise ValueError("解析页面失败，请检查你的cookie是否正确！")
-
-
-if __name__ == "__main__":
-    q = "#姜萍中考621分却上中专的原因#"  # 话题
-    kind = "热门"  # 综合，实时，热门，高级
-    cookie = "SINAGLOBAL=8518412904158.368.1713933172488; SUB=_2A25La68FDeRhGeFJ4lIT9CzNyj6IHXVoCK7NrDV8PUNbmtANLXetkW9NfsmQ4Qz8zDr0mXZfri_ta_ZUdx1oaRtm; ALF=02_1721199701; _s_tentry=www.weibo.com; Apache=2102778680934.707.1718678424260; XSRF-TOKEN=PRz0XbyfMJG4mq7eMDRnCAPT; ULV=1718678424414:3:2:2:2102778680934.707.1718678424260:1718607749265; WBPSESS=2bPq4LTfaY-EnTnt8h5hWX9KGoz50scMNqd4lpDCT8IiCLnpv2C9Z_Kk8JVbYkIyBQ0eFNYccRFpnV_A6ntYbzFhGRa6K_Y0y_9c3zhS6S73tx-mc1RjJ-zr1RH9K8LXJeEA0KnwBx7zuzsiTaBcug=="
-    data = get_all_main_body(q, kind, cookie)
-    data.to_csv("demo.csv", encoding="utf_8_sig")

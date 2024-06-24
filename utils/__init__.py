@@ -1,3 +1,3 @@
-from get_main_body import get_all_main_body
-from get_comments_level_one import get_all_level_one
-from get_comments_level_two import get_all_level_two
+from utils.get_main_body import get_all_main_body
+from utils.get_comments_level_one import get_all_level_one
+from utils.get_comments_level_two import get_all_level_two

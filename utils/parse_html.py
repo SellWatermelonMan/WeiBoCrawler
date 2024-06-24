@@ -114,9 +114,3 @@ def get_dataframe_from_html_text(html_text):
     data, total_page = parse_html(html_text)
     process_dataframe(data)
     return data, total_page
-
-
-if __name__ == "__main__":
-    html_text = get_html_text("./resp.html")
-    data, total_page = get_dataframe_from_html_text(html_text)
-    print(data, total_page)
