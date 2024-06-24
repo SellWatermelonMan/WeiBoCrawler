@@ -39,4 +39,4 @@ python main.py
 ```
 ### 效果
 
-![./pic/1.png](#pic_center)
+![效果](./Pic/1.png#pic_center)
