@@ -30,7 +30,7 @@ kind = "综合"  # 综合，实时，热门，高级
 cookie = "" # 输入cookie
 wbparser = WBParser(cookie)
 wbparser.get_comments_level_one()
-```python
+```
 
 ### 获取二级评论
 
