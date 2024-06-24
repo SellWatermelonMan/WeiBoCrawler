@@ -1,10 +1,9 @@
 import os
 import pandas as pd
 from rich.progress import track
-from get_main_body import get_all_main_body
-from get_comments_level_one import get_all_level_one
-from get_comments_level_two import get_all_level_two
+from utils import *
 import logging
+
 
 logging.basicConfig(level=logging.INFO)
 
